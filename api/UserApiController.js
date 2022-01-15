@@ -3,8 +3,6 @@ let User = require('../models/UserModel');
 
 
 exports.newUser = function (req, res) {
-    console.log("test");
-    console.log(req);
     let userId = req.body.userId;
     let profileImgUrl = req.body.profileImgUrl;
     let lastName = req.body.lastName;

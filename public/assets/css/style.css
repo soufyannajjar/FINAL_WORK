@@ -1,0 +1,79 @@
+@font-face {
+  font-family: NexaL;
+  src: url(/assets/fonts/NexaLight.otf);
+}
+
+
+@font-face {
+  font-family: NexaB;
+  src: url(/assets/fonts/NexaBold.otf);
+}
+
+body {
+  width: 100%;
+  font-family: 'NexaB', sans-serif !important;
+
+}
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: #6950FF;
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}
+
+h2,
+h3,
+p {
+  font-family: 'NexaL', sans-serif !important;
+}
+
+
+input {
+  border-radius: 2px 2px 2px;
+}
+
+.save {
+  border-radius: 12px;
+  background-color: black;
+  border: white;
+  color: white;
+  font-family: Georgia;
+  font-size: 18px;
+}
+
+.Back {
+  border-radius: 12px;
+  background-color: green;
+  border: white;
+  color: white;
+  font-family: Georgia;
+  font-size: 18px;
+}
+
+.blue-color {
+  color: #6950FF !important;
+}
+
+.green-color {
+  color: #51ff82 !important;
+}
+
+.gradient {
+  background: linear-gradient(90deg, #6950FF 0%, #51ff82 100%);
+}
+
+@media only screen and (max-width: 500px) {
+
+  ul,
+  ol {
+    margin: 0 0 0px 0px;
+  }
+
+  input {
+    font-size: 10px;
+  }
+
+}

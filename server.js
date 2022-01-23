@@ -27,6 +27,26 @@ app.use(express.urlencoded({
   extended: true
 }));
 
+// Configure private session
+var session = require("express-session");
+
+app.use(
+  session({
+    secret: "secret",
+    resave: true,
+    saveUninitialized: true,
+  })
+);
+
+
+// Setting middleware
+app.use(express.static("public")); //Make the only public folder "public" 
+app.use(express.static(path.join(__dirname + '../public')));
+
+
+// import the file containing the routes into the server
+let router = require("./routes");
+app.use("/", router);
 
 // Launch server
 var port = 8000;

@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>
+    Emotify - Welcome
+  </title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="author" content="" />
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
+  <style>
+    .gradient {
+      background: linear-gradient(90deg, #6950FF 0%, #51ff82 100%);
+    }
+  </style>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script src="assets/js/header.js"></script>
+
+</head>
+
+<body class="leading-normal tracking-normal text-white gradient">
+
+  <nav id="header" class="fixed w-full z-30 top-0 text-white">
+     <div class="w-full container mx-auto flex flex-wrap items-center justify-between my-4 py-2">
+  
+       <img id="logo" class="w-full md:w-4/5 z-50" src="assets/images/logo_white.png" style="width: 10%;" />
+       <div
+         class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20"
+         id="nav-content">
+         <ul class="list-reset lg:flex justify-end flex-1 items-center">
+           <li class="mr-3">
+             <a class="inline-block py-2 px-4 textElement text-white  font-bold no-underline" href="/">Home</a>
+           </li>
+           <li class="mr-3">
+             <a class="inline-block textElement text-white  no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+               href="#howitworks">How it works</a>
+           </li>
+           <li class="mr-3">
+             <a class="inline-block textElement text-white  no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+               href="#aboutus">About us</a>
+           </li>
+           <li class="mr-3">
+             <a class="inline-block textElement text-white  no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+               href="#pricing">Pricing</a>
+           </li>
+           <li class="mr-3">
+             <a class="inline-block textElement text-white  no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+               href="#contact">Contact</a>
+           </li>
+         </ul>
+         <a id="headerActionButton" href="/dashboard"
+           class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+  
+
+           Log-In
+         </a>
+
+  
+  
+       </div>
+     </div>
+   </nav>
+  
+
+  <!--Hero-->
+  <div class="pt-24 mt-28 pb-20">
+    <div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center ">
+      <!--Left Col-->
+      <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
+        <p class="uppercase tracking-loose w-full">Welcome to Emotify</p>
+        <h1 class="my-4 text-5xl font-bold leading-tight">
+          MEASURE EMOTIONS
+        </h1>
+        <p class="leading-normal text-2xl mb-8">Thanks to artificial intelligence, we are now able to measure people's
+          emotions through their camera. We allow companies to test their videos (advertisements or others) on real
+          people to make strategic marketing choices. The testers are naturally paid and have the privilege to see
+          exclusive videos.
+        </p>
+        <a href="/dashboard"
+          class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+          Start
+        </a>
+      </div>
+      <!--Right Col-->
+      <div class="w-full md:w-3/5 py-6 text-center">
+        <video class=" w-full z-50" style="border-radius: 10px; margin-left: 20%; width: 80%;" controls>
+          <source
+            src="https://firebasestorage.googleapis.com/v0/b/emotify-2a2c1.appspot.com/o/videoplayback.mp4?alt=media&token=de362a34-1d66-48ed-80ea-dc2dc4c46e23"
+            type="video/mp4">
+
+        </video>
+      </div>
+    </div>
+  </div>
+  <div class="relative -mt-12 lg:-mt-24">
+    <svg viewBox="0 0 1428 174" version="1.1" xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink">
+      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-2.000000, 33.000000)" fill="#FFFFFF" fill-rule="nonzero">
+          <path
+            d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496"
+            opacity="0.100000001"></path>
+          <path
+            d="M100,104.708498 C277.413333,72.2345949 426.147877,52.5246657 546.203633,45.5787101 C666.259389,38.6327546 810.524845,41.7979068 979,55.0741668 C931.069965,56.122511 810.303266,74.8455141 616.699903,111.243176 C423.096539,147.640838 250.863238,145.462612 100,104.708498 Z"
+            opacity="0.100000001"></path>
+          <path
+            d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z"
+            id="Path-4" opacity="0.200000003"></path>
+        </g>
+        <g transform="translate(-4.000000, 76.000000)" fill="#FFFFFF" fill-rule="nonzero">
+          <path
+            d="M0.457,34.035 C57.086,53.198 98.208,65.809 123.822,71.865 C181.454,85.495 234.295,90.29 272.033,93.459 C311.355,96.759 396.635,95.801 461.025,91.663 C486.76,90.01 518.727,86.372 556.926,80.752 C595.747,74.596 622.372,70.008 636.799,66.991 C663.913,61.324 712.501,49.503 727.605,46.128 C780.47,34.317 818.839,22.532 856.324,15.904 C922.689,4.169 955.676,2.522 1011.185,0.432 C1060.705,1.477 1097.39,3.129 1121.236,5.387 C1161.703,9.219 1208.621,17.821 1235.4,22.304 C1285.855,30.748 1354.351,47.432 1440.886,72.354 L1441.191,104.352 L1.121,104.031 L0.457,34.035 Z">
+          </path>
+        </g>
+      </g>
+    </svg>
+  </div>
+  <section id="howitworks" class="bg-white border-b py-8">
+    <div class="container max-w-5xl mx-auto m-8">
+      <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+        How it works ?
+      </h1>
+      <div class="w-full mb-4">
+        <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+      </div>
+      <div class="flex flex-wrap">
+        <div class="w-5/6 sm:w-1/2 p-6">
+          <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
+            For entreprises
+          </h3>
+          <p class="text-gray-600 mb-8">
+            As a company you want to test your advertising or any other video? Opt for a good marketing strategy after
+            having seen the statistics that we offer you thanks to our video testers. Sign up, upload your videos and
+            let the magic happen.
+          </p>
+        </div>
+        <div class="w-full sm:w-1/2">
+          <img class="w-full md:w-4/5 z-50" src="assets/images/icons/statistic.png" style="width: 35%;" />
+        </div>
+      </div>
+      <div class="flex flex-wrap flex-col-reverse sm:flex-row">
+        <div class="w-full sm:w-1/2 mt-6">
+          <img class="w-full md:w-4/5 z-50" src="assets/images/icons/income.png" style="float: right; width: 35%;" />
+
+        </div>
+        <div class="w-full sm:w-1/2 p-6 mt-6">
+          <div class="align-middle">
+            <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
+              For viewers
+            </h3>
+            <p class="text-gray-600 mb-8">
+              As a viewer, you enjoy the privilege of seeing exclusive videos, your emotion will be automatically
+              captured and you will earn money for it. What better way to get paid for entertainment?
+
+              Sign up and start earning money right now!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="aboutus" class="bg-white border-b py-8">
+    <div class="container mx-auto flex flex-wrap pt-4 pb-12">
+      <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+        About Us
+      </h1>
+      <div class="w-full mb-4">
+        <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+      </div>
+      <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+        <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+          <div class="flex flex-wrap no-underline hover:no-underline">
+            <p class="w-full text-gray-600 text-xs md:text-sm px-6">
+              YOU NEED IT
+            </p>
+            <div class="w-full font-bold text-xl text-gray-800 px-6">
+              SECURITY
+            </div>
+            <p class="text-gray-800 text-base px-6 mb-5">
+              Safety is important to you. That's why we offer companies a secure environment to upload their videos. The
+              viewers are not filmed, and no trace of their face will be recorded. Only their emotions are captured in
+              live. The payment is also done in a secure way.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+        <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+          <div class="flex flex-wrap no-underline hover:no-underline">
+            <p class="w-full text-gray-600 text-xs md:text-sm px-6">
+              HISTORY
+            </p>
+            <div class="w-full font-bold text-xl text-gray-800 px-6">
+             FROM STUDIES TO SUCCESS
+            </div>
+            <p class="text-gray-800 text-base px-6 mb-5">
+              Emotify was first conceived and created as part of a thesis for a bachelor's degree in creative
+              technologies in 2021 - 2022. In the meantime, the platform has grown in size and notoriety. Here we are
+              with a finalized and fully functional version.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+        <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+          <div class="flex flex-wrap no-underline hover:no-underline">
+            <p class="w-full text-gray-600 text-xs md:text-sm px-6">
+              WE DO IT
+            </p>
+            <div class="w-full font-bold text-xl text-gray-800 px-6">
+              CONTINUOUS IMPROVEMENT
+            </div>
+            <p class="text-gray-800 text-base px-6 mb-5">
+              Behind Emotify is a unique designer & developer. He is continuously improving the platform. Obviously, in
+              the future, Emotify will hire more and more people to make this project grow.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="pricing" class="bg-gray-100 py-8">
+    <div class="container mx-auto px-2 pt-4 pb-12 text-gray-800">
+      <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+        Pricing
+      </h1>
+      <div class="w-full mb-4">
+        <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+      </div>
+      <div class="flex flex-col sm:flex-row justify-center pt-12 my-12 sm:my-4">
+        <div class="flex flex-col w-5/6 lg:w-1/2 mx-auto lg:mx-0 rounded-none lg:rounded-l-lg bg-white mt-4">
+          <div class="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow">
+            <div class="p-8 text-3xl font-bold text-center border-b-4">
+              ENTERPRISES
+            </div>
+            <ul class="w-full text-center text-sm">
+              <li class="border-b py-4">Get 10 days free</li>
+              <li class="border-b py-4">Upload unlimited videos</li>
+              <li class="border-b py-4">Stop and resume your subscription at any time</li>
+            </ul>
+          </div>
+          <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
+            <div class="w-full pt-6 text-3xl text-gray-600 font-bold text-center">
+              €99.99
+              <span class="text-base">/ month</span>
+            </div>
+            <div class="flex items-center justify-center">
+              <a href="/dashboard"
+                class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                Sign Up
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col w-5/6 lg:w-1/2 mx-auto lg:mx-0 rounded-none lg:rounded-l-lg bg-white mt-4 mr-10">
+          <div class="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow">
+            <div class="p-8 text-3xl font-bold text-center border-b-4">
+              VIEWER REMUNERATION
+            </div>
+            <ul class="w-full text-center text-sm">
+              <li class="border-b py-4">Get paid for every video</li>
+              <li class="border-b py-4">Start whenever you want</li>
+              <li class="border-b py-4">Get paid every 2 weeks</li>
+            </ul>
+          </div>
+          <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
+            <div class="w-full pt-6 text-3xl text-gray-600 font-bold text-center">
+              €0.70
+              <span class="text-base">/ video viewed</span>
+            </div>
+            <div class="flex items-center justify-center">
+              <a href="/dashboard"
+                class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                Earn now
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="bg-white border-b py-8">
+    <div class="container mx-auto flex flex-wrap pt-4 pb-12">
+      <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+        Get In Touch
+      </h1>
+      <div class="w-full mb-4">
+        <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+      </div>
+      <div class="w-full md:w-1/2 p-6 flex flex-col flex-grow flex-shrink">
+        <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+          <div class="flex flex-wrap p-6 no-underline hover:no-underline">
+
+            <div class="w-full font-bold text-xl text-gray-800">
+              We are available for you.
+            </div>
+            <p class="text-gray-800 text-base  mb-5">
+              Do you have a question? A suggestion? Do not hesitate to contact us on our different social networks or
+              via the form on your right. We will answer as soon as possible.
+              <div>
+
+                <button
+                  class="bg-blue-500 px-4 py-2 font-semibold text-white inline-flex items-center space-x-2 rounded-full">
+                  <svg class="w-5 h-5 fill-current" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                      d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                  </svg>
+                  <span>Facebook</span>
+                </button>
+                <button
+                  class="bg-blue-300 px-4 py-2 font-semibold text-white inline-flex items-center space-x-2 rounded-full">
+                  <svg class="w-5 h-5 fill-current" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                      d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                  </svg>
+                  <span>Twitter</span>
+                </button>
+                <button
+                  class="bg-blue-500 px-4 py-2 font-semibold text-white inline-flex items-center space-x-2 rounded-full">
+                  <svg class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                    class="bi bi-linkedin" viewBox="0 0 16 16">
+                    <path
+                      d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                  </svg><span>LinkedIn</span>
+                </button>
+
+              </div>
+            </p>
+
+          </div>
+        </div>
+      </div>
+      <div class="w-full md:w-1/2 p-6 flex flex-col flex-grow flex-shrink">
+        <div class="flex-1 w-full bg-white rounded-t rounded-b-none overflow-hidden shadow">
+          <div class="flex flex-wrap p-6 no-underline hover:no-underline">
+
+            <form class=" bg-white rounded w-full" action="/contactMail" method="POST">
+              <div class="w-full">
+                <label class="block mb-2 text-sm font-bold text-gray-700" for="name">
+                  Name
+                </label>
+                <input name="name"
+                  class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                  id="name" type="text" placeholder="name" value="" />
+
+              </div>
+              <div class="w-full">
+                <label class="block mb-2 text-sm font-bold text-gray-700" for="email">
+                  Email
+                </label>
+                <input name="email"
+                  class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                  id="email" type="email" placeholder="Email" />
+              </div>
+              <div class="w-full">
+                <label class="block mb-2 text-sm font-bold text-gray-700" for="message">
+                  Message
+                </label>
+                <input name="message"
+                  class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                  id="message" type="text" placeholder="message" />
+              </div>
+              <div class="flex items-center justify-center">
+                <button type="submit"
+                  class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full mb-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                  Send
+                </button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+  </section>
+
+  <svg class="wave-top" viewBox="0 0 1439 147" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+      <g transform="translate(-1.000000, -14.000000)" fill-rule="nonzero">
+        <g class="wave" fill="#f8fafc">
+          <path
+            d="M1440,84 C1383.555,64.3 1342.555,51.3 1317,45 C1259.5,30.824 1206.707,25.526 1169,22 C1129.711,18.326 1044.426,18.475 980,22 C954.25,23.409 922.25,26.742 884,32 C845.122,37.787 818.455,42.121 804,45 C776.833,50.41 728.136,61.77 713,65 C660.023,76.309 621.544,87.729 584,94 C517.525,105.104 484.525,106.438 429,108 C379.49,106.484 342.823,104.484 319,102 C278.571,97.783 231.737,88.736 205,84 C154.629,75.076 86.296,57.743 0,32 L0,0 L1440,0 L1440,84 Z">
+          </path>
+        </g>
+        <g transform="translate(1.000000, 15.000000)" fill="#FFFFFF">
+          <g transform="translate(719.500000, 68.500000) rotate(-180.000000) translate(-719.500000, -68.500000) ">
+            <path
+              d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496"
+              opacity="0.100000001"></path>
+            <path
+              d="M100,104.708498 C277.413333,72.2345949 426.147877,52.5246657 546.203633,45.5787101 C666.259389,38.6327546 810.524845,41.7979068 979,55.0741668 C931.069965,56.122511 810.303266,74.8455141 616.699903,111.243176 C423.096539,147.640838 250.863238,145.462612 100,104.708498 Z"
+              opacity="0.100000001"></path>
+            <path
+              d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z"
+              opacity="0.200000003"></path>
+          </g>
+        </g>
+      </g>
+    </g>
+  </svg>
+  <section class="container mx-auto text-center py-6 mb-12">
+    <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-white">
+      Let's start now
+    </h1>
+    <div class="w-full mb-4">
+      <div class="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t"></div>
+    </div>
+    <h3 class="my-4 text-3xl leading-tight">
+      Register now and dive into the world of artificial intelligence.
+    </h3>
+    <a id="headerActionButton" href="/dashboard"
+      class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+
+      Go !
+
+    </a>
+  </section>
+  <footer class="bg-white ">
+    <div class="container mx-auto px-8">
+      <div class="w-full flex flex-col md:flex-row py-6">
+        <div class="flex-1 mb-6 text-black">
+          <img class="w-full md:w-3/5 z-50" src="assets/images/logo.png" />
+        </div>
+        <div class="flex-1">
+          <p class="uppercase text-gray-500 md:mb-6">Social</p>
+          <ul class="list-reset mb-6">
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Facebook</a>
+            </li>
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Linkedin</a>
+            </li>
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Twitter</a>
+            </li>
+          </ul>
+        </div>
+        <div class="flex-1">
+          <p class="uppercase text-gray-500 md:mb-6">Links</p>
+          <ul class="list-reset mb-6">
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#pricing" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Pricing</a>
+            </li>
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#aboutus" class="no-underline hover:underline text-gray-800 hover:text-pink-500">About Us</a>
+            </li>
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#contact" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+</body>
+
+</html>

@@ -3,6 +3,15 @@ let express = require("express");
 let app = express();
 let router = express.Router();
 
+/* ------------ ------------ VIEWS AND POSTS ------------ ------------   */
+/* HOME - Views */
+router.get('/', (req, res) => {
+    res.render('home'); //Render home page
+  })
+
+
+
+  
 
 /* API  */
 // API CONTROLLERS

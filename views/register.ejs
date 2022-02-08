@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>
+        Emotify - Welcome
+    </title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
+    <style>
+        .gradient {
+            background: linear-gradient(90deg, #6950FF 0%, #51ff82 100%);
+        }
+    </style>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+
+</head>
+
+
+
+<body class="leading-normal tracking-normal gradient pt-24 h-screen">
+    <%- include('header') %>
+
+    <div class="container mx-auto ">
+        <div class="flex justify-center px-6 my-12">
+
+            <div class="w-full lg:w-11/12 justify-center  flex">
+                <div class="w-full lg:w-6/12 justify-center bg-white p-5 rounded-lg mb-20">
+                    <h3 class="pt-4 text-2xl text-center">Create an Account!</h3>
+                    <% if(success_msg!= '') { %>
+                    <p class="text-center"><%=success_msg %> </p>
+                    <% } %>
+
+                    <% if(error_msg != '') { %>
+                    <p class="text-center text-red-400"><%= error_msg %> </p>
+                    <% } %>
+                    <% if(error != '') { %>
+                    <p class="text-center text-red-400"><%= error %> </p>
+
+                    <% } %>
+
+                    <form class="px-8 pt-6 pb-8 mb-4 bg-white rounded" action="/register" method="POST">
+
+                        <div class="mb-4">
+                            <label class="block mb-2 text-sm font-bold text-gray-700" for="firstName">
+                                First Name
+                            </label>
+                            <input required name="firstName"
+                                class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                                id="firstName" type="text" placeholder="Soufyan"
+                                value="<%= typeof firstName != 'undefined' ? firstName : '' %>" />
+                        </div>
+                        <div class="mb-4">
+                            <label class="block mb-2 text-sm font-bold text-gray-700" for="lastName">
+                                Last Name
+                            </label>
+                            <input required name="lastName"
+                                class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                                id="lastName" type="text" placeholder="Najjar"
+                                value="<%= typeof lastName != 'undefined' ? lastName : '' %>" />
+                        </div>
+                        <div class="mb-4">
+                            <label class="block mb-2 text-sm font-bold text-gray-700" for="email">
+                                Email
+                            </label>
+                            <input required name="email"
+                                class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                                id="email" type="email" placeholder="Soufyan@emotify.be"
+                                value="<%= typeof email != 'undefined' ? email : '' %>" />
+                        </div>
+                        <div class="mb-4 w-full md:flex md:justify-between">
+                            <div class="w-full mb-4 md:mr-2 md:mb-0">
+                                <label class="block mb-2 text-sm font-bold text-gray-700" for="password">
+                                    Password
+                                </label>
+                                <input required name="password"
+                                    class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                                    id="password" type="password" placeholder="******************"
+                                    value="<%= typeof password != 'undefined' ? password : '' %>" />
+                            </div>
+                            <div class="  w-full md:ml-2">
+                                <label class="block mb-2 text-sm font-bold text-gray-700" for="c_password">
+                                    Confirm Password
+                                </label>
+                                <input required name="c_password"
+                                    class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                                    id="c_password" type="password" placeholder="******************"
+                                    value="<%= typeof c_password != 'undefined' ? c_password : '' %>" />
+                            </div>
+
+                        </div>
+                        <hr>
+                        <br>
+                        <div class="mb-4 gradient py-8 px-2 text-white rounded">
+                            <label for="isCompany">I will register with the role: </label>
+<br>
+                            <select class="bg-transparent text-3xl" name="isCompany" id="isCompany" onchange="isCompanyFunction(this.value);"
+                                value="<%= typeof isCompany != 'undefined' ? isCompany : false %>">
+                                <option value=1>Company</option>
+                                <option value=0>Viewer</option>
+                            </select>
+                        </div>
+
+
+                        <div id="companyInputs">
+                            <div class="mb-4">
+                                <label class="block mb-2 text-sm font-bold text-gray-700" for="adress">
+                                    Adress
+                                </label>
+                                <input name="adress"
+                                    class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                                    id="adress" type="text" placeholder="Superstreet 84, 1000 Brussels"
+                                    value="<%= typeof adress != 'undefined' ? adress : '' %>" />
+                            </div>
+                            <div class="mb-4">
+                                <label class="block mb-2 text-sm font-bold text-gray-700" for="companyNumber">
+                                    Company Number
+                                </label>
+                                <input name="companyNumber"
+                                    class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                                    id="companyNumber" type="text" placeholder="TVA958..."
+                                    value="<%= typeof companyNumber != 'undefined' ? companyNumber : '' %>" />
+                            </div>
+                        </div>
+                        <div id="viewerInputs">
+                            <div class="mb-4">
+                                <label class="block mb-2 text-sm font-bold text-gray-700" for="birthDate">
+                                    BirthDate
+                                </label>
+                                <input name="birthDate"
+                                    class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                                    id="birthDate" type="date" placeholder="1996-04-05"
+                                    value="<%= typeof birthDate != 'undefined' ? birthDate : '' %>" />
+                            </div>
+                            <div class="mb-4">
+                                <label class="block mb-2 text-sm font-bold text-gray-700" for="bankNumber">
+                                    BankNumber
+                                </label>
+                                <input name="bankNumber"
+                                    class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                                    id="bankNumber" type="bankNumber" placeholder="BE44 0595 5004 5888"
+                                    value="<%= typeof bankNumber != 'undefined' ? bankNumber : '' %>" />
+                            </div>
+
+                        </div>
+
+                        <div class="mb-6 text-center">
+
+
+                            <button type="submit"
+                                class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                                Register now
+                            </button>
+
+                        </div>
+                        <hr class="mb-6 border-t" />
+               
+                        <div class="text-center">
+                            <a class="inline-block text-sm blue-color align-baseline hover:text-blue-800"
+                                href="/login">
+                                Already have an account? Login!
+                            </a>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        isCompanyFunction(true);
+
+        function isCompanyFunction(CompanyOrViewer) {
+            if (CompanyOrViewer == "1" || CompanyOrViewer == 1 || CompanyOrViewer ==
+                true) {
+                document.getElementById("companyInputs").style.display = "block";
+                document.getElementById("viewerInputs").style.display = "none";
+            } else {
+                document.getElementById("viewerInputs").style.display = "block";
+                document.getElementById("companyInputs").style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

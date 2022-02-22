@@ -1,4 +1,4 @@
-class User { // model imported in userController
+class User { // model imported in AuthController
 
     userId;
     profileImgUrl;

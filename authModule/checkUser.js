@@ -33,7 +33,7 @@ module.exports = {
     },
     checkAdmin: function (req, res, next) {
         if (req.isAuthenticated()) {
-            if ((req.user.isCompany === 1) && (req.user.email === "admin@emotify.com")) {
+            if ((req.user.isCompany === 1) /*&& (req.user.email === "admin@emotify.com")*/ ) {
                 console.log("PASSED");
                 return next();
             } else {
@@ -44,12 +44,7 @@ module.exports = {
         }
     },
     redirectDashboard: function (req, res, next) {
-
         if (req.isAuthenticated()) {
-            if (req.user.email === "admin@emotify.com") {
-                res.redirect("/admin/dashboard");
-            }
-            // DIRECTLY REDIRECT ADMIN TO DASHBOARD
             if (req.user.isCompany === 0) {
                 res.redirect("/viewer/dashboard");
             } else {

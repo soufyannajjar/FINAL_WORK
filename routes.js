@@ -3,27 +3,6 @@ let express = require("express");
 let app = express();
 let router = express.Router();
 
-//Configure authentification controllers (login & register)
-let authController = require('./controllers/AuthController');
-let checkUser = require("./authModule/checkUser");
-
-//Configure Video Controllers 
-let videoReviewController = require('./controllers/VideoReviewController');
-let videoController = require('./controllers/VideoController');
-
-//Configure Subscription Controller
-let subscriptionController = require('./controllers/SubscriptionController');
-
-//Configure Wallet Controller
-let walletController = require('./controllers/WalletController');
-
-//Configure Dashboard Controller
-let dashboardController = require('./controllers/DashboardController');
-
-//Configure Mail Controller
-let mailController = require("./controllers/MailController");
-
-
 /* ------------ ------------ VIEWS AND POSTS ------------ ------------   */
 /* HOME - Views */
 router.get('/', (req, res) => {
@@ -56,7 +35,6 @@ router.post('/checkResetCode', authController.checkForPasswordReset); //Send pos
 
 
 /* REGISTER - Views */
-
 router.get('/register', (req, res, next) => {
   if (!req.isAuthenticated()) {
     res.render("register.ejs"); //Render register page if user is not authenticated
@@ -78,64 +56,7 @@ router.get('/logout', (req, res) => {
 
 
 /* ------------ COMPANY ------------  */
-
-/* COMPANY DASHBOARD  - Views */
-router.get("/company/dashboard", checkUser.checkCompany, dashboardController.getAllCompanyDashboardVariables);
-// check if user is company
-// get All dashboard variables and render dashboard
-
-
-
-/* COMPANY UPLOAD VIDEO  - Views */
-router.get("/company/upload", checkUser.checkCompany, (req, res, next) => {
-  res.render("company/uploadVideo.ejs", {
-    videoObject: 0,
-    errorList: 0
-  });
-});
-
-router.post('/company/upload', videoController.addVideo); //Send Post to addVideo and upload company video in database
-router.get('/company/subscription', checkUser.checkCompany, subscriptionController.paymentFunction); //Send user to payment page for subscription
-router.get('/company/checkPayment', checkUser.checkCompany, subscriptionController.checkPayment); //Check if user have paid and update his subscription
-
-
-/* COMPANY VIDEO DETAILS - Views */
-router.get("/company/video/:videoId", checkUser.checkCompany, videoController.getVideoById); //Show video details by unique video id
-/* ------------ END COMPANY ------------  */
-
-
-
-/* ------------ VIEWER ------------  */
-/* VIEWER DASHBOARD  - Views */
-router.get("/dashboard", (req, res, next) => {
-  checkUser.redirectDashboard(req, res, next);
-});
-
-router.get("/viewer/dashboard", checkUser.checkViewer, dashboardController.getAllViewerDashboardVariables);
-// check if user is VIEWER
-// get All dashboard variables and render dashboard
-
-router.post('/viewer/updateBankNumber', walletController.updateBankNumber); //Send Post to update bankNumber and update the bank number of user
-/* ------------ END VIEWER ------------  */
-
-router.get("/viewer/earn", checkUser.checkViewer, videoController.getViewerRandomVideo);
-//Viewer watch videos
-
-router.post("/viewer/sendEmotions", checkUser.checkViewer, videoReviewController.sendEmotions);
-
-
-
-/* ADMINISTRATION DASHBOARD  - Views */
-router.get("/admin/dashboard", checkUser.checkAdmin, dashboardController.getAllAdminDashboardVariables);
-// check if user is ADMIN
-// get All dashboard variables and render dashboard
-
-router.get('/admin/userPaid/:userIdPaid/:userSalary', checkUser.checkAdmin, walletController.reinitialiseWallet);
-// Check if user is ADMIN and if admin has paid the viewer, set the wallet to €0
-/* ------------ END ADMINISTRATION ------------  */
-
-
-/* ------------ ------------ END VIEWS AND POSTS ------------ ------------   */
+  
 
 /* API  */
 // API CONTROLLERS

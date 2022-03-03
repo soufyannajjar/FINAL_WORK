@@ -23,9 +23,6 @@ app.use(express.urlencoded({
   extended: true
 }));
 
-app.use(express.urlencoded({
-  extended: true
-}));
 
 // Configure private session
 var session = require("express-session");
@@ -37,11 +34,39 @@ app.use(
     saveUninitialized: true,
   })
 );
+// Configure Authentification with passport
+const passport = require('passport');
 
+app.use(passport.initialize());
+app.use(passport.session());
+require("./authModule/passport")(passport)
+
+
+//use flash to display front-end messages
+const flash = require('connect-flash');
+app.use(flash());
+app.use((req, res, next) => {
+  res.locals.success_msg = req.flash('success_msg');
+  res.locals.error_msg = req.flash('error_msg');
+  res.locals.error = req.flash('error');
+  next();
+})
+
+// Cookienpm
+var cookieParser = require("cookie-Parser");
+app.use(cookieParser());
+
+// Make UserObject available in all the app
+app.use(function (req, res, next) {
+  res.locals.currentUser = req.user;
+  //console.log(res.locals.currentUser);
+  next();
+})
 
 // Setting middleware
 app.use(express.static("public")); //Make the only public folder "public" 
 app.use(express.static(path.join(__dirname + '../public')));
+
 
 
 // import the file containing the routes into the server
@@ -51,6 +76,5 @@ app.use("/", router);
 // Launch server
 var port = 8000;
 app.listen(port, function () {
-  console.log("Running server on port " + port);
+  console.log("Emotify is Running on port " + port);
 });
-

@@ -195,7 +195,7 @@ exports.postRegister = function (req, res) {
                     'message': error
                 });
             } else {
-                res.status(200).redirect('back');
+                res.status(200).redirect('/login');
                 //console.log(req.isAuthenticated());
             }
         });

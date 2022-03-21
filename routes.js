@@ -56,7 +56,30 @@ router.get('/logout', (req, res) => {
 
 
 /* ------------ COMPANY ------------  */
-  
+
+/* COMPANY DASHBOARD  - Views */
+router.get("/company/dashboard", checkUser.checkCompany, dashboardController.getAllCompanyDashboardVariables);
+// check if user is company
+// get All dashboard variables and render dashboard
+
+
+
+/* COMPANY UPLOAD VIDEO  - Views */
+router.get("/company/upload", checkUser.checkCompany, (req, res, next) => {
+  res.render("company/uploadVideo.ejs", {
+    videoObject: 0,
+    errorList: 0
+  });
+});
+
+router.post('/company/upload', videoController.addVideo); //Send Post to addVideo and upload company video in database
+router.get('/company/subscription', checkUser.checkCompany, subscriptionController.paymentFunction); //Send user to payment page for subscription
+router.get('/company/checkPayment', checkUser.checkCompany, subscriptionController.checkPayment); //Check if user have paid and update his subscription
+
+
+/* COMPANY VIDEO DETAILS - Views */
+router.get("/company/video/:videoId", checkUser.checkCompany, videoController.getVideoById); //Show video details by unique video id
+/* ------------ END COMPANY ------------  */
 
 /* API  */
 // API CONTROLLERS

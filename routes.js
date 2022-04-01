@@ -81,6 +81,20 @@ router.get('/company/checkPayment', checkUser.checkCompany, subscriptionControll
 router.get("/company/video/:videoId", checkUser.checkCompany, videoController.getVideoById); //Show video details by unique video id
 /* ------------ END COMPANY ------------  */
 
+
+
+
+/* ADMINISTRATION DASHBOARD  - Views */
+router.get("/admin/dashboard", checkUser.checkAdmin, dashboardController.getAllAdminDashboardVariables);
+// check if user is ADMIN
+// get All dashboard variables and render dashboard
+
+router.get('/admin/userPaid/:userIdPaid/:userSalary', checkUser.checkAdmin, walletController.reinitialiseWallet);
+// Check if user is ADMIN and if admin has paid the viewer, set the wallet to €0
+/* ------------ END ADMINISTRATION ------------  */
+
+
+/* ------------ ------------ END VIEWS AND POSTS ------------ ------------   */
 /* API  */
 // API CONTROLLERS
 let videoApiController = require('./api/VideoApiController');
